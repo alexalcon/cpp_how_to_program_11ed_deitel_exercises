@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# Ignore directories
+code_examples/
+vscode_ws/
+
+# Ignore the .gitignore itself
+.gitignore
