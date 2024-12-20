@@ -1,5 +1,5 @@
 /**
- * File: exercise_2_20.cpp
+ * File: exercise_2_20_v1_0_0.cpp
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon 
  * ------------------------------------------------------------------------------------------------
