@@ -28,7 +28,7 @@ int main() {
         >> number4 >> number5;
     //------------------------------------
 
-    // main logic - non-exclusive conditionals
+    // main logic: non-exclusive conditionals
     // *****************************************
     int smallest, largest;    
 
