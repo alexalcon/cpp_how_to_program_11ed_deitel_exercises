@@ -47,4 +47,4 @@ int main() {
          << static_cast<int>(character);
 
     return 0;
-} // end function main
+}

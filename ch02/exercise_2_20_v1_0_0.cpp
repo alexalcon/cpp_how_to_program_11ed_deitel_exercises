@@ -6,7 +6,7 @@
  * Description: (Multiples) Write a program that reads in two integers and determines and prints
  *              if the first is a multiple of the second. [Hint: Use the remainder operator (%).]
  * ------------------------------------------------------------------------------------------------
- * Date: February 2024 
+ * Created on: 29-02-2024
  */
 
 #include <iostream>
@@ -36,4 +36,4 @@ int main() {
     //************************************************************
 
     return 0;
-} // end function main
+} 

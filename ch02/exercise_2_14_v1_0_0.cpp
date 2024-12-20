@@ -25,7 +25,7 @@ int main() {
     cin >> number1 >> number2;
     //-------------------------------
 
-    // main logic - non-exclusive conditionals
+    // main logic: non-exclusive conditionals
     // trichotomy law
     //***************************************
     if (number1 > number2) {
@@ -40,4 +40,4 @@ int main() {
     //***************************************
 
     return 0;
-} // end function main
+} 
