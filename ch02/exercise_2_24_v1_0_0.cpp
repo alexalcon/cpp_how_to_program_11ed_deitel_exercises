@@ -42,4 +42,4 @@ int main() {
     cout << 10 <<"\t" << 10*10 << "\t" << 10*10*10 << "\n";
     
     return 0;
-} // end function main
+}

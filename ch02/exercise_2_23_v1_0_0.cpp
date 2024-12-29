@@ -39,7 +39,7 @@ int main() {
          << d5; 
             
     return 0;
-} // end function main
+}
 
 
 

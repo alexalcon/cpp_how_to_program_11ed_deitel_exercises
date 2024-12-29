@@ -43,4 +43,4 @@ int main() {
     cout << "* * * * * * * *\n" << " * * * * * * * *\n";
     
     return 0;
-} // end function main
+}
