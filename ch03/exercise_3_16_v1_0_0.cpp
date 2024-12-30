@@ -54,7 +54,7 @@ int main() {
         
         // finish the cursor to the last row character
         if (row != square_size) { 
-            cout << "\n"; // move to the next row
+            cout << "\n";
         }
     }
     

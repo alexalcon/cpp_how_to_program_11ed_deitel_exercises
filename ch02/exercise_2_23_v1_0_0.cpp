@@ -41,7 +41,6 @@ int main() {
     return 0;
 } 
 
-
 /**************************************************************************
  * Side Note:                                                             *
  * The mathematical theory underpinning the main logic is rooted in a     *
