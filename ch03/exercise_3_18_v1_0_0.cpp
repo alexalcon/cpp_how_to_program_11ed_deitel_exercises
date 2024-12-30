@@ -16,6 +16,9 @@
  *              binary numbers, refer to see the Number Systems appendix at 
  *              https://deitel.com/cpphtp11.]
  * -------------------------------------------------------------------------------------------------
+ * Note: This program assumes that the input binary poitive number and its decimal equivalent 
+ *       fit within the range of system-defined integer limits (INT_MIN to INT_MAX).
+ * -------------------------------------------------------------------------------------------------
  * Created on: 29-12-2024
  */
 
@@ -26,27 +29,38 @@ using namespace std;
 
 int main() {
     // initialization phase
+    //-----------------------------------------------------
     // read binary positive integer from user
-    //-----------------------------------------------
+    // ensure the binary positive number is within 
+    // valid system integer limits
+    // (optional: add additional validation if necessary)
     int binary_number{0}; // positive binary number
 
     cout << "Enter binary positive integer: ";
     cin >> binary_number;  
-    //-----------------------------------------------
+
+    int decimal_number{0};
+    int counter{0};
+    //-----------------------------------------------------
 
     // processing phase
     while( binary_number != 0 ) {  
         // main logic
         // breaking down binary digits
-        //-----------------------------------
+        //***********************************
         int binary_digit;
         binary_digit = binary_number % 10;
 
-        binary_number = binary_number / 10;   
-    
-        cout << binary_digit;
-        //-----------------------------------
+        binary_number /= 10;   
+        //***********************************
+
+        // converting from binary to decimal
+        decimal_number = decimal_number + binary_digit*pow(2, counter);
+        counter++;
     }
+    
+    // termination phase
+    cout << "The decimal equivalent is: " << decimal_number;
     
     return 0;
 }

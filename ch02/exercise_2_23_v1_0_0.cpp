@@ -42,7 +42,6 @@ int main() {
 }
 
 
-
 /**************************************************************************
  * Side Note:                                                             *
  * The mathematical theory underpinning the main logic is rooted in a     *
