@@ -44,7 +44,7 @@ int main() {
     //-----------------------------------------------------
 
     // processing phase
-    while( binary_number != 0 ) {  
+    while(binary_number != 0) {  
         // main logic
         // breaking down binary digits
         //***********************************
