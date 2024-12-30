@@ -64,3 +64,36 @@ int main() {
     
     return 0;
 }
+
+
+/**************************************************************************
+ * Side Note:                                                             *
+ * The mathematical theory underpinning the decimal representation of a   *
+ * binary positive integer is rooted in a fundamental topic in Number     *
+ * Theory, specifically the concept of base-b representation. This theory *
+ * not only provides the foundation for understanding numerical systems   *
+ * and conversions between different bases but also plays a critical role *
+ * in algorithms involving divisibility, modular arithmetic, and the      *
+ * computation of least common multiples (LCM).                           *
+ *                                                                        *
+ * It is essential not only to apply the method for representing the      *
+ * decimal equivalent of a binary number but also to understand how the   *
+ * process works. Gaining insight into the underlying mechanisms—such as  *
+ * how positional values in base-b representations correspond to powers   *
+ * of the base—enables a deeper comprehension of numerical operations     *
+ * and fosters a more robust mathematical intuition.                      *
+ *                                                                        *
+ * For a deeper insight, refer to José Plínio's book on Introdução à      *
+ * Teoria dos Números, Chapter 1: Divisibilidade, Section 1.7: Mínimo     *
+ * Múltiplo Comum. Theorem 1.17 rigorously explores the fundamental       *
+ * properties of base-b representations, proving that every positive      *
+ * integer can be uniquely expressed in the form:                         *
+ *                                                                        *
+ *     n = a_k * b^k + a_(k-1) * b^(k-1) + ... + a_1 * b + a_0            *
+ *                                                                        *
+ * where b > 1, 0 ≤ a_i < b (for i = 0, 1, ..., k), and a_k ≠ 0. This     *
+ * representation is key to understanding the uniqueness of number        *
+ * representations in various bases and their implications in algorithms  *
+ * for number manipulation, including the computation of least common     *
+ * multiples and other critical operations in number theory.              *
+ **************************************************************************/
