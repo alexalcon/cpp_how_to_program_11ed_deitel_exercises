@@ -37,14 +37,17 @@
  */
 
 #include <iostream>
+#include <iomanip>
 #include <boost/multiprecision/cpp_int.hpp>
+#include <boost/multiprecision/cpp_dec_float.hpp>
 
 using namespace std;
 using boost::multiprecision::cpp_int;
+using boost::multiprecision::cpp_dec_float_100;
 
 int main() {
     // initializing cpp_ints
-    cpp_int large_integer{0}; 
+    cpp_int large_integer{0}; // task a) 
     cpp_int counter{1}; 
     cpp_int factorial{1}; 
 
@@ -70,11 +73,37 @@ int main() {
                                 << factorial;
     //--------------------------------------------------------------
 
-    // b)
-    //--------------------------------------------------------------
-    //--------------------------------------------------------------
+    // b) e = 1 + (1/1!) + (1/2!) + (1/3!) + ...
+    //---------------------------------------------------------
+    // initializing cpp_ints
+    cpp_dec_float_100 e{1.0};  // 'e' constant
+    int counter_b{1};          // 'e' sumation counter
+    cpp_int factorial_b{1};    // denominator factorial
 
-    // c)
+    // initialization phase
+    cpp_int accuracy; // number of sumation terms
+    cout << "\n\nEnter the numbers of terms in the sumation"
+         << " (option \"b\"): ";
+    cin >> accuracy;
+
+    // processing phase
+    // main logic
+    //*********************************************
+    // counter-controlled iteration for sumation 
+    while( counter_b <= (accuracy - 1) ) {
+        factorial_b *= counter_b;
+
+        e += 1 / cpp_dec_float_100 (factorial_b);
+    
+        counter_b++;
+    }
+    //*********************************************
+
+    cout << setprecision(100) << fixed 
+         << "Constant e approximation: " << e;
+    //---------------------------------------------------------
+
+    // c) e^x = 1 + (x/1!) + (x^2/2!) + (x^3/3!) + ...
     //--------------------------------------------------------------
     //--------------------------------------------------------------
     
