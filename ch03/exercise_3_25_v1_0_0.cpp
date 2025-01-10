@@ -51,7 +51,7 @@ int main() {
     cpp_int counter{1}; 
     cpp_int factorial{1}; 
 
-    // a)
+    // a) factorial of a non-negative integer
     //--------------------------------------------------------------
     // initialization phase
     cout << "Enter a nonnegative integer number (option \"a\"): ";
@@ -73,6 +73,8 @@ int main() {
                                 << factorial;
     //--------------------------------------------------------------
 
+    cout << "\n---------------------------------------------------";
+
     // b) e = 1 + (1/1!) + (1/2!) + (1/3!) + ...
     //---------------------------------------------------------
     // initializing cpp_ints
@@ -81,19 +83,20 @@ int main() {
     cpp_int factorial_b{1};    // denominator factorial
 
     // initialization phase
-    cpp_int accuracy; // number of sumation terms
-    cout << "\n\nEnter the numbers of terms in the sumation"
+    cpp_int accuracy_b; // number of sumation terms
+    cout << "\nEnter the numbers of terms in the sumation"
          << " (option \"b\"): ";
-    cin >> accuracy;
+    cin >> accuracy_b;
 
     // processing phase
     // main logic
     //*********************************************
     // counter-controlled iteration for sumation 
-    while( counter_b <= (accuracy - 1) ) {
+    // each iteration is a term computation
+    while( counter_b <= (accuracy_b - 1) ) {
         factorial_b *= counter_b;
 
-        e += 1 / cpp_dec_float_100 (factorial_b);
+        e += 1 / cpp_dec_float_100(factorial_b);
     
         counter_b++;
     }
@@ -102,10 +105,46 @@ int main() {
     cout << setprecision(100) << fixed 
          << "Constant e approximation: " << e;
     //---------------------------------------------------------
-
+    
+    cout << "\n---------------------------------------------------";
+    
     // c) e^x = 1 + (x/1!) + (x^2/2!) + (x^3/3!) + ...
-    //--------------------------------------------------------------
-    //--------------------------------------------------------------
+    //--------------------------------------------------------
+    // initializing cpp_ints
+    cpp_dec_float_100 ex{1.0}; // 'e^x' function
+    int counter_c{1};          // 'e^x' sumation counter
+    cpp_int factorial_c{1};    // denominator factorial
+
+    // initialization phase
+    cpp_int accuracy_c; // number of sumation terms
+    cout << "\nEnter the numbers of terms in the sumation"
+         << " (option \"c\"): ";
+    cin >> accuracy_c;
+
+    cpp_dec_float_100 x; // variable x (real number)
+    cout << "Enter the variable x (real number): ";
+    cin >> x;
+    cpp_dec_float_100 hold_x = x; // holding variable x 
+    
+    // processing phase
+    // main logic
+    //*********************************************
+    // counter-controlled iteration for sumation 
+    // each iteration is a term computation
+    while( counter_c <= (accuracy_c - 1) ) {
+        factorial_c *= counter_c; // denominator 
+
+        ex += x / cpp_dec_float_100(factorial_c);
+        
+        x *= hold_x; // numerator
+    
+        counter_c++;
+    }
+    //*********************************************
+
+    cout << setprecision(100) << fixed 
+         << "e^x approximation: " << ex;
+    //--------------------------------------------------------
     
     return 0;
 }
