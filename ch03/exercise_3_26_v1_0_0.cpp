@@ -29,7 +29,8 @@ using namespace std;
 int main() {
     // initialization phase
     int encrypted_data{0};
-
+    int multiplier{1};
+     
     int data{0};
     cout << "Enter a four digit integer: ";
     cin >> data;
@@ -43,13 +44,13 @@ int main() {
     while (data != 0) {
         int digit{data%10};
 
-        encrypted_data = ((digit + 7) % 10);
-
-        cout << encrypted_data << " ";
+        encrypted_data += ( multiplier * ((digit + 7) % 10));
 
         data /= 10;
+        multiplier *= 10;
     } 
     //************************************ 
+    cout << encrypted_data;
     
     // decryption process 
     // main logic
