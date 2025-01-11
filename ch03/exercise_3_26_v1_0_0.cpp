@@ -19,7 +19,7 @@
  *              integer. Write a separate application that inputs an encrypted four-digit integer
  *              and decrypts it (by reversing the encryption scheme) to form the original number.             
  * -------------------------------------------------------------------------------------------------
- * Created on: 10-01-2025
+ * Created on: 11-01-2025
  */
 
 // encryption program
@@ -30,24 +30,43 @@ using namespace std;
 
 int main() {
     // initialization phase
+    //---------------------------------------
     int encrypted_data{0};
     int multiplier{100};
      
     int data{0};
     cout << "Enter a four digit integer: ";
     cin >> data;
-    int holding_data = data; 
+    //---------------------------------------
 
-    // processing phase - encryption process
+    // processing phase
     //------------------------------------------------------------
     // main logic
     //******************************************************** 
     while (data != 0) {
-        int digit{data%10};
+        int digit{data%10}; // getting data last digit
 
         encrypted_data += (multiplier * ((digit + 7) % 10));
         
-        data /= 10;
+        data /= 10; // getting off data last digit
+
+        // once every last digit is obtained and 
+        // encrypted the multiplier is updated
+        /**
+         * e.g: for 1234 then the first encrypted process 
+         *      (arithmetic process of adding 7 and computing 
+         *      mod 10) result is 1098 (in reversal order), 
+         *      i.e., 8901 is the correct first encrypted 
+         *      process
+         * 
+         *      thus, for the second encrypted process 
+         *      (swapping numbers), 8901 --> 0189 or 
+         *      1098 --> 0189  
+         * 
+         *      now, (1098 --> 0189) then (in line 48):
+         *
+         *          0189 = 1*100 + 0*1000 + 9*1 + 9*10
+         */ 
         if (multiplier == 1000) {
             multiplier = 1;
         } 
@@ -56,8 +75,9 @@ int main() {
         }
     } 
     //******************************************************** 
+    //------------------------------------------------------------
     
-    // termination process - encryption process
+    // termination process
     // show result
     /**
      * handling leading zeros - setfill() and setw() functions
@@ -78,7 +98,6 @@ int main() {
      */
     cout << "Encrypted data: ";
     cout << std::setfill('0') << std::setw(4) << encrypted_data;
-    //------------------------------------------------------------
     
     return 0;
 }
