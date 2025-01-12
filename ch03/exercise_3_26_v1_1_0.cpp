@@ -32,21 +32,22 @@ using namespace std;
 int main() {
     // initialization phase
     //----------------------------------------------------------------------------------
-    string encrypted_data;
+    string encrypted_data = "";
     cout << "Enter a four-digit encrypted integer (including leading zeros if any): ";
     cin >> encrypted_data;
 
     // ensure the input is exactly 4 digits long
     while (encrypted_data.length() != 4) {
-        cout << "Invalid input! Please enter exactly 4 digits." << endl;
-        return 1; // exit with error code
+        cout << "Invalid input! Please enter exactly 4 digits: ";
+        cin >> encrypted_data;
     }
     //----------------------------------------------------------------------------------
      
     // processing phase
-    //--------------------------------------------------------------------
+    //-------------------------------------------------------------------------------------
     // swapping digits to reverse the encryption
     // swap the first and third digits, and the second and fourth digits
+    
     // swapping process logic
     //**************************************
     // swap first and third     
@@ -60,13 +61,27 @@ int main() {
     encrypted_data[3] = temp;
     //**************************************
 
-    int swapped_data = stoi(encrypted_data); // string to integer
-    //--------------------------------------------------------------------
+    // arithmetic process logic
+    //***********************************************************************************
+    // decrypt each digit by reversing (digit + 7) % 10 
+    string string_decrypted_data = "";
+    int index = 0;
+    while (index < encrypted_data.length()) {
+        int digit = encrypted_data[index] - '0'; // convert char to int
+        int decrypted_digit = (digit - 7) < 0 ? (digit - 7 + 10) : (digit - 7);
+        string_decrypted_data += to_string(decrypted_digit); // append decrypted digit 
+        index++;
+    }
+    //***********************************************************************************
+
+    // convert decrypted string to integer
+    int decrypted_data = stoi(string_decrypted_data);
+    //-------------------------------------------------------------------------------------
     
     // termination phase
     // show result
-    cout << "Decrypted data (after swapping): ";
-    cout << std::setfill('0') << std::setw(4) << swapped_data << endl;
+    cout << "Decrypted data: ";
+    cout << std::setfill('0') << std::setw(4) << decrypted_data;
 
     return 0;
 }

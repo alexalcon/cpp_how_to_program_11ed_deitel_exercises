@@ -83,18 +83,18 @@ int main() {
      * handling leading zeros - setfill() and setw() functions
      * 
      *      std::setfill('0'):
-     *          - Ensures that leading spaces are replaced 
-     *            by zeros.
-     *          - Any "missing" digits will be padded with 
+     *          - ensures that leading spaces are replaced 
+     *            by zeros
+     *          - any "missing" digits will be padded with 
      *            zeros to make the output a full four-digit 
-     *            number.
+     *            number
      * 
      *      std::setw(4):
-     *          - Ensures that the output always has a width 
-     *            of 4 characters. If the number has fewer 
+     *          - ensures that the output always has a width 
+     *            of 4 characters, so, if the number has fewer 
      *            than 4 digits (e.g., 15, 5), it will be 
      *            padded with leading zeros to make it 4 
-     *            digits (e.g., 0015, 0005).
+     *            digits (e.g., 0015, 0005)
      */
     cout << "Encrypted data: ";
     cout << std::setfill('0') << std::setw(4) << encrypted_data;
