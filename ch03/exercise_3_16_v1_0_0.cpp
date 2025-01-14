@@ -3,16 +3,16 @@
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon 
  * -------------------------------------------------------------------------------------------------
- * Description: (Square of Asterisks) Write a program that inputs the size of a square’s side, then
- *              prints a hollow square of that size using asterisks and blanks. Your program should 
- *              work for squares of all side sizes between 1 and 20. For example, if your program 
- *              reads a size of 5, it should print
+ * Description: ✰ (Square of Asterisks) Write a program that inputs the size of a square’s side, 
+ *                 then prints a hollow square of that size using asterisks and blanks. Your 
+ *                 program should work for squares of all side sizes between 1 and 20. For example, 
+ *                 if your program reads a size of 5, it should print
  *                  
- *                  *****
- *                  *   *
- *                  *   *
- *                  *   *
- *                  *****
+ *                      *****
+ *                      *   *
+ *                      *   *
+ *                      *   *
+ *                      *****
  * -------------------------------------------------------------------------------------------------
  * Created on: 24-12-2024
  */

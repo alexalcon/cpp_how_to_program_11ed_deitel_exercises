@@ -3,9 +3,9 @@
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon 
  * -------------------------------------------------------------------------------------------------
- * Description: (Digits of an Integer) Write a program that inputs a five-digit integer, separates 
- *              the integer into its digits and prints them with three spaces between each. For
- *              example, if the user types in 42339, the program should print:
+ * Description: ✰ (Digits of an Integer) Write a program that inputs a five-digit integer, 
+ *                 separates the integer into its digits and prints them with three spaces between 
+ *                 each. For example, if the user types in 42339, the program should print:
  *                      4   2   3   3   9        
  * -------------------------------------------------------------------------------------------------
  * Created on: 29-02-2024

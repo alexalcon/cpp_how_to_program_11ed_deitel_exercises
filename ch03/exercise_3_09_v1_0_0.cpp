@@ -2,11 +2,11 @@
  * File: exercise_3_9_v1_0_0.cpp
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon 
- * ---------------------------------------------------------------------------------------------
- * Description: (Find the Two Largest Numbers) Using an approach similar to Exercise 3.7, find
- *              the two largest values among the 10 numbers. [Note: You must input each number 
- *              only once.]
- * ---------------------------------------------------------------------------------------------
+ * -------------------------------------------------------------------------------------------------
+ * Description: ✰ (Find the Two Largest Numbers) Using an approach similar to Exercise 3.7, find
+ *                 the two largest values among the 10 numbers. [Note: You must input each number 
+ *                 only once.]
+ * -------------------------------------------------------------------------------------------------
  * Created on: 24-12-2024
  */
 
@@ -18,7 +18,8 @@ int main() {
     int largest{0};       // assuming largest number is 0
     int secondLargest{0}; // assuming second largest number is 0
 
-    // processing phase: using counter-controlled iteration
+    // processing phase
+    // using counter-controlled iteration
     while (counter <= 10) {
         std::cout << "Enter integer number: ";
         int number;

@@ -2,10 +2,10 @@
  * File: exercise_2_15_v1_0_0.cpp
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon
- * -----------------------------------------------------------------------------------------
- * Description: (Smallest and Largest) Write a program that inputs three integers from the 
- *              keyboard and prints the smallest and largest of these three numbers.
- * -----------------------------------------------------------------------------------------
+ * --------------------------------------------------------------------------------------------
+ * Description: ✰ (Smallest and Largest) Write a program that inputs three integers from the 
+ *                 keyboard and prints the smallest and largest of these three numbers.
+ * --------------------------------------------------------------------------------------------
  * Created on: 29-02-2024
  */
 

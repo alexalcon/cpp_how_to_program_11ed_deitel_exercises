@@ -3,10 +3,10 @@
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon 
  * -------------------------------------------------------------------------------------------------
- * Description: (Validating User Input) The examination results program of Fig. 3.3 assumes that
- *              any value input by the user that’s not a 1 must be a 2. Modify the application to 
- *              validate its inputs. If a value entered is not 1 or 2, keep looping until the user 
- *              enters a correct value.
+ * Description: ✰ (Validating User Input) The examination results program of Fig. 3.3 assumes that
+ *                 any value input by the user that’s not a 1 must be a 2. Modify the application 
+ *                 to validate its inputs. If a value entered is not 1 or 2, keep looping until the 
+ *                 user enters a correct value.
  * -------------------------------------------------------------------------------------------------
  * Created on: 24-12-2024
  */

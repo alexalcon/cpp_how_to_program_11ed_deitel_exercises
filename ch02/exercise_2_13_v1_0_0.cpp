@@ -2,16 +2,14 @@
  * File: exercise_2_13_v1_0_0.cpp
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon 
- * -------------------------------------------------------------------------------------
- * Description:
- *  
- *     (Printing) Write a program that prints the numbers 1 to 4 on the same line with
- *     each pair of adjacent numbers separated by one space. Do this in several ways:
+ * ----------------------------------------------------------------------------------------------
+ * Description: (Printing) Write a program that prints the numbers 1 to 4 on the same line with
+ *              each pair of adjacent numbers separated by one space. Do this in several ways:
  *           
- *         a) Using one statement with one stream insertion operator.
- *         b) Using one statement with four stream insertion operators.
- *         c) Using four statements.
- * -------------------------------------------------------------------------------------
+ *                  a) Using one statement with one stream insertion operator.
+ *                  b) Using one statement with four stream insertion operators.
+ *                  c) Using four statements.
+ * ----------------------------------------------------------------------------------------------
  * Created on: 29-02-2024
  */
 

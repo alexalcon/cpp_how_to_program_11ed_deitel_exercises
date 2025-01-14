@@ -3,9 +3,9 @@
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon 
  * -------------------------------------------------------------------------------------------------
- * Description: (Largest and Smallest Integers) Write a program that reads in five integers and 
- *              determines and prints the largest and the smallest integers in the group. Use only
- *              the programming techniques you learned in this chapter.
+ * Description: ✰ (Largest and Smallest Integers) Write a program that reads in five integers and 
+ *                 determines and prints the largest and the smallest integers in the group. Use 
+ *                 only the programming techniques you learned in this chapter.
  * -------------------------------------------------------------------------------------------------
  * Created on: 29-02-2024
  */

@@ -11,8 +11,8 @@
  *              if (x > 5)
  *                  if (y > 5)
  *                      cout << "x and y are > 5";
- *                  else
- *                      cout << "x is <= 5";
+ *              else
+ *                  cout << "x is <= 5";
  * 
  *              appears to indicate that if 'x' is greater than 5, the nested 'if' statement
  *              determines whether 'y' is also greater than 5. If so, the statement outputs

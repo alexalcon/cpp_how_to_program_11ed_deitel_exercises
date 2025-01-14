@@ -3,21 +3,21 @@
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon 
  * -------------------------------------------------------------------------------------------------
- * Description: (Printing the Decimal Equivalent of a Binary Number) Input an integer containing
- *              only 0s and 1s (i.e., a “binary” integer) and print its decimal equivalent. Use the 
- *              remainder and division operators to pick off the “binary” number’s digits one at a 
- *              time from right to left. In the decimal number system, the rightmost digit has a
- *              positional value of 1, the next digit left has a positional value of 10, then 100,
- *              then 1000, and so on. Similarly, in the binary number system, the rightmost digit 
- *              has a positional value of 1, the next digit left has a positional value of 2, then
- *              4, then 8, and so on. Thus the decimal number 234 can be interpreted as 
- *              2 * 100 + 3 * 10 + 4 * 1. The decimal equivalent of binary 1101 is 
- *              1 * 1 + 0 * 2 + 1 * 4 + 1 * 8 or 1 + 0 + 4 + 8, or 13. [Note: To learn more about
- *              binary numbers, refer to see the Number Systems appendix at 
- *              https://deitel.com/cpphtp11.]
+ * Description: ✰ (Printing the Decimal Equivalent of a Binary Number) Input an integer containing
+ *                 only 0s and 1s (i.e., a “binary” integer) and print its decimal equivalent. Use 
+ *                 the remainder and division operators to pick off the “binary” number’s digits 
+ *                 one at a time from right to left. In the decimal number system, the rightmost 
+ *                 digit has a positional value of 1, the next digit left has a positional value of 
+ *                 10, then 100, then 1000, and so on. Similarly, in the binary number system, the 
+ *                 rightmost digit has a positional value of 1, the next digit left has a positional
+ *                 value of 2, then 4, then 8, and so on. Thus the decimal number 234 can be 
+ *                 interpreted as 2 * 100 + 3 * 10 + 4 * 1. The decimal equivalent of binary 1101 is 
+ *                 1 * 1 + 0 * 2 + 1 * 4 + 1 * 8 or 1 + 0 + 4 + 8, or 13. [Note: To learn more about
+ *                 binary numbers, refer to see the Number Systems appendix at 
+ *                 https://deitel.com/cpphtp11.]
  * -------------------------------------------------------------------------------------------------
- * Note: This program assumes that the input binary poitive number and its decimal equivalent 
- *       fit within the range of system-defined integer limits (INT_MIN to INT_MAX).
+ * Note: This program assumes that the input binary positive integer number and its decimal 
+ *       equivalent fit within the range of system-defined integer limits (INT_MIN to INT_MAX).
  * -------------------------------------------------------------------------------------------------
  * Created on: 29-12-2024
  */
@@ -30,12 +30,11 @@ using namespace std;
 int main() {
     // initialization phase
     //-----------------------------------------------------
-    // read binary positive integer from user
+    // read binary positive integer from user and
     // ensure the binary positive number is within 
     // valid system integer limits
     // (optional: add additional validation if necessary)
     int binary_number{0}; // positive binary number
-
     cout << "Enter binary positive integer: ";
     cin >> binary_number;  
 

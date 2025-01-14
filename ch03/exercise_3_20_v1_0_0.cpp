@@ -18,7 +18,7 @@ int main() {
 
     while (true) {
         std::cout << number << " "; 
-        number*=2;
+        number*=2; // arithmetic overflow
     }
 
     return 0;

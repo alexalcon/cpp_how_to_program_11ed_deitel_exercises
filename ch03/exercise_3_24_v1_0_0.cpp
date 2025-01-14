@@ -3,8 +3,8 @@
  * Author: Alex Alcón
  * GitHub: https://github.com/alexalcon 
  * -------------------------------------------------------------------------------------------------
- * Description: (Sides of a Right Triangle) Write a program that reads three nonzero integers and
- *              determines and prints whether they’re the sides of a right triangle.
+ * Description: ✰ (Sides of a Right Triangle) Write a program that reads three nonzero integers and
+ *                 determines and prints whether they’re the sides of a right triangle.
  * -------------------------------------------------------------------------------------------------
  * Created on: 30-12-2024
  */
