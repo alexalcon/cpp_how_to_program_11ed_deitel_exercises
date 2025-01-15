@@ -32,5 +32,4 @@
 *.app
 
 # Ignore directories
-code_examples/
 vscode_ws/
