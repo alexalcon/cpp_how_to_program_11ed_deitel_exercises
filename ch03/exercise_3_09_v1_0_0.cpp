@@ -38,7 +38,8 @@ int main() {
         counter++;
     }
     
-    // termination phase: output the two largest numbers
+    // termination phase 
+    // output the two largest numbers
     std::cout << "\nThe largest number is: " << largest;
     std::cout << "\nThe second largest number is: " << secondLargest;
 
