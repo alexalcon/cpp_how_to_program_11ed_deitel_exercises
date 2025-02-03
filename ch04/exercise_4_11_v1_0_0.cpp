@@ -46,14 +46,30 @@ int main() {
     // cout << "\n";
 
     // patern b)
-    cout << "Pattern b)\n\n";
+    // cout << "Pattern b)\n\n";
+    // column_counter = 10;
+    // for (int row{0} ; row < 10 ; ++row) {
+    //     for (int column{0} ; column < column_counter ; ++column) {
+    //         cout << "*";
+    //     }
+    //     --column_counter;
+    //     cout << "\n";
+    // }
+
+    // patern c)
+    cout << "Pattern c)\n\n";
     column_counter = 10;
     for (int row{0} ; row < 10 ; ++row) {
+        for (int space_counter{0}; space_counter < row ; ++space_counter) {
+            cout << " ";
+        }
+
         for (int column{0} ; column < column_counter ; ++column) {
             cout << "*";
         }
         --column_counter;
         cout << "\n";
+        
     }
     
     return 0;
