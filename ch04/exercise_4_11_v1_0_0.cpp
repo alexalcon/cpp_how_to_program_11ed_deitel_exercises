@@ -34,16 +34,27 @@ using namespace std;
 
 int main() {
     // patern a)
-    cout << "Pattern a)\n\n";
+    // cout << "Pattern a)\n\n";
     int column_counter{1};
+    // for (int row{0} ; row < 10 ; ++row) {
+    //     for (int column{0} ; column < column_counter ; ++column) {
+    //         cout << "*";
+    //     }
+    //     ++column_counter;
+    //     cout << "\n";
+    // }
+    // cout << "\n";
+
+    // patern b)
+    cout << "Pattern b)\n\n";
+    column_counter = 10;
     for (int row{0} ; row < 10 ; ++row) {
         for (int column{0} ; column < column_counter ; ++column) {
             cout << "*";
         }
-        ++column_counter;
+        --column_counter;
         cout << "\n";
     }
-    cout << "\n";
-
+    
     return 0;
 }
