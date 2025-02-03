@@ -33,51 +33,51 @@
 using namespace std;
 
 int main() {
-    // // patern a)
-    // cout << "Pattern a)\n";
-    // cout << "----------\n";
+    // patern a)
+    cout << "Pattern a)\n";
+    cout << "----------\n";
     int column_counter{1};
-    // for (int row{0} ; row < 10 ; ++row) {
-    //     for (int column{0} ; column < column_counter ; ++column) {
-    //         cout << "*";
-    //     }
-    //     ++column_counter;
-    //     cout << "\n";
-    // }
-    // cout << "\n";
+    for (int row{0} ; row < 10 ; ++row) {
+        for (int column{0} ; column < column_counter ; ++column) {
+            cout << "*";
+        }
+        ++column_counter;
+        cout << "\n";
+    }
+    cout << "\n";
 
-    // // patern b)
-    // cout << "Pattern b)\n";
-    // cout << "----------\n";
-    // column_counter = 10;
-    // for (int row{0} ; row < 10 ; ++row) {
-    //     for (int column{0} ; column < column_counter ; ++column) {
-    //         cout << "*";
-    //     }
-    //     --column_counter;
-    //     cout << "\n";
-    // }
-    // cout << "\n";
+    // patern b)
+    cout << "Pattern b)\n";
+    cout << "----------\n";
+    column_counter = 10;
+    for (int row{0} ; row < 10 ; ++row) {
+        for (int column{0} ; column < column_counter ; ++column) {
+            cout << "*";
+        }
+        --column_counter;
+        cout << "\n";
+    }
+    cout << "\n";
 
-    // // patern c)
-    // cout << "Pattern c)\n";
-    // cout << "----------\n";
-    // column_counter = 10;
-    // // blank spaces filling 
-    // for (int row{0} ; row < 10 ; ++row) {
-    //     for (int space_counter{0}; space_counter < row ; ++space_counter) {
-    //         cout << " ";
-    //     }
+    // patern c)
+    cout << "Pattern c)\n";
+    cout << "----------\n";
+    column_counter = 10;
+    // blank spaces filling 
+    for (int row{0} ; row < 10 ; ++row) {
+        for (int space_counter{0}; space_counter < row ; ++space_counter) {
+            cout << " ";
+        }
     
-    // // asterisks filling 
-    //     for (int column{0} ; column < column_counter ; ++column) {
-    //         cout << "*";
-    //     }
-    //     --column_counter;
-    //     cout << "\n";
+    // asterisks filling 
+        for (int column{0} ; column < column_counter ; ++column) {
+            cout << "*";
+        }
+        --column_counter;
+        cout << "\n";
         
-    // }
-    // cout << "\n";
+    }
+    cout << "\n";
 
     // patern d)
     cout << "Pattern d)\n";
