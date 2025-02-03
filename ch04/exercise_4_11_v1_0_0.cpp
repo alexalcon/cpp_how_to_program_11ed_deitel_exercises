@@ -33,8 +33,9 @@
 using namespace std;
 
 int main() {
-    // patern a)
-    // cout << "Pattern a)\n\n";
+    // // patern a)
+    // cout << "Pattern a)\n";
+    // cout << "----------\n";
     int column_counter{1};
     // for (int row{0} ; row < 10 ; ++row) {
     //     for (int column{0} ; column < column_counter ; ++column) {
@@ -45,8 +46,9 @@ int main() {
     // }
     // cout << "\n";
 
-    // patern b)
-    // cout << "Pattern b)\n\n";
+    // // patern b)
+    // cout << "Pattern b)\n";
+    // cout << "----------\n";
     // column_counter = 10;
     // for (int row{0} ; row < 10 ; ++row) {
     //     for (int column{0} ; column < column_counter ; ++column) {
@@ -55,22 +57,46 @@ int main() {
     //     --column_counter;
     //     cout << "\n";
     // }
+    // cout << "\n";
 
-    // patern c)
-    cout << "Pattern c)\n\n";
+    // // patern c)
+    // cout << "Pattern c)\n";
+    // cout << "----------\n";
+    // column_counter = 10;
+    // // blank spaces filling 
+    // for (int row{0} ; row < 10 ; ++row) {
+    //     for (int space_counter{0}; space_counter < row ; ++space_counter) {
+    //         cout << " ";
+    //     }
+    
+    // // asterisks filling 
+    //     for (int column{0} ; column < column_counter ; ++column) {
+    //         cout << "*";
+    //     }
+    //     --column_counter;
+    //     cout << "\n";
+        
+    // }
+    // cout << "\n";
+
+    // patern d)
+    cout << "Pattern d)\n";
+    cout << "----------\n";
     column_counter = 10;
     for (int row{0} ; row < 10 ; ++row) {
-        for (int space_counter{0}; space_counter < row ; ++space_counter) {
+        // blank spaces filling 
+        for (int space_counter{0}; space_counter < (column_counter - 1) ; ++space_counter) {
             cout << " ";
         }
-
-        for (int column{0} ; column < column_counter ; ++column) {
+        
+        // asterisks filling 
+        for (int column{0} ; column < (row + 1) ; ++column) {
             cout << "*";
         }
         --column_counter;
         cout << "\n";
         
     }
-    
+
     return 0;
 }
