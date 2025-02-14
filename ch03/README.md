@@ -6,12 +6,12 @@ Therefore, to successfully compile and execute programs utilizing this library, 
 
 ## Compiling and Running the Code in Microsoft Visual Studio:
 
-1. Create a new project, as described in **Section 1.11**.
+1. Create a new project.
 
 2. In the **Solution Explorer**, right-click the project’s **Source Files** folder and select  
    **Add > Existing Item...**.
 
-3. Navigate to the `ch03` folder, select `fig03_05.cpp` and click **Add**.
+3. Navigate to the `ch03` folder, select a program file that uses this library and click **Add**.
 
 4. In the **Solution Explorer**, right-click the project’s name and select **Properties...**.
 
