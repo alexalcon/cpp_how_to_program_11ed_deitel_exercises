@@ -26,7 +26,7 @@ int main() {
     //----------------------------------------------------------------
     cpp_dec_float_50 principal{10000000}; // $1000 initial principal
    
-    cout << format("Initial principal: {:>7}\n\n", 1000);
+    cout << format("Initial principal: {:>7}\n\n", principal);
 
     // table headers
     //==========================================================
@@ -57,7 +57,7 @@ int main() {
     // processing phase
     // calculate amount on deposit for each of ten years
     for (int year{1} ; year <= 10 ; ++year) { // counter-controlled iteration for yearly interest 
-        cpp_dec_float_50 rate{"0.05"};    // initial interest rate (5%)
+        cpp_dec_float_50 rate{"0.05"}; // initial interest rate (5%)
         
         cout << format("{:>4}", year); // print year in each arrow
         for (int i{1} ; i <= 6 ; ++i) { // calcualte amount on deposit for each interest rate

@@ -34,6 +34,7 @@ int main() {
         cout << "Enter a positive integer between 1 and 30: ";
         cin >> integer_input;
 
+        // validating user input for integers between 1 and 30
         while ( (integer_input < 1) || (integer_input > 30) ) {
             cout << "Input positive integer must be between 1 and"
                  << " 30, please reenter the number : ";

@@ -63,13 +63,13 @@ int main() {
     cout << "Pattern c)\n";
     cout << "----------\n";
     column_counter = 10;
-    // blank spaces filling 
     for (int row{0} ; row < 10 ; ++row) {
+        // blank spaces filling 
         for (int space_counter{0}; space_counter < row ; ++space_counter) {
             cout << " ";
         }
     
-    // asterisks filling 
+        // asterisks filling 
         for (int column{0} ; column < column_counter ; ++column) {
             cout << "*";
         }
