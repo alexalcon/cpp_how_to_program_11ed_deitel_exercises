@@ -6,7 +6,7 @@
  * Description: ✰ (Factorials) Factorials are used frequently in probability problems. The 
  *                 factorial of a positive integer n (written n! and pronounced “n factorial”) is 
  *                 equal to the product of the positive integers from 1 to n. Write an application 
- *                 that calculates the factorials  of 1 through 20. Use type long. Display the 
+ *                 that calculates the factorials of 1 through 20. Use type long. Display the 
  *                 results in tabular format. What difficulty might prevent you from calculating 
  *                 the factorial of 100? 
  * -------------------------------------------------------------------------------------------------
@@ -44,8 +44,9 @@ int main() {
     return 0;
 }
 
+
 /**************************************************************************
- * Side Note:                                                             *
+ * Site Note:                                                             *
  *                                                                        *
  * Factorial values grow quickly beyond what you can represent with C++’s *
  * fundamental integer types. Consider using Boost Multiprecision’s       *
