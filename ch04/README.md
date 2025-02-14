@@ -57,5 +57,26 @@ where this custom header is used, just type the same command stated previously s
 ```bash
 g++ -std=c++20 -I ../code_examples/CPlusPlusHowToProgram11e/libraries/multiprecision-Boost_1_80_0/include exercise_4_10_v1_0_0.cpp -o exercise_4_10_v1_0_0
 ```
- 
 
+### Some Notes on the Use of the Header `decimalformatter.h`
+
+- The following instructions detail how to properly utilize the Boost Multiprecision `cpp_dec_float_50` object within the context of the exercise `exercise_4_15_v1_0_0.cpp`.
+
+    - **Adjusting Precision:**
+      - To use the `cpp_dec_float_50` object for the `pi` variable, you need to update the precision setting in the custom header file.
+      - Locate line 22 in `ch04/decimalformatter.h` and change the `setprecision(2)` argument to `setprecision(8)`. 
+      - This modification ensures that the `pi` variable is displayed with **8 digits of precision**.
+    
+    - **Updating the Source Code:**
+      - Open `exercise_4_15_v1_0_0.cpp` and make the following adjustments:
+        - **Uncomment** lines **40** and **79**.
+        - **Comment** lines **41** and **80**.
+      - These changes configure the exercise to use the `cpp_dec_float_50` class from Boost Multiprecision correctly, along with the custom `decimalformatter.h` header.
+    
+    - **Compilation Notes:**
+      - After applying the above changes compile the code typing the same command stated in previously sections:
+      ```bash
+      g++ -std=c++20 -I ../code_examples/CPlusPlusHowToProgram11e/libraries/multiprecision-Boost_1_80_0/include exercise_4_15_v1_0_0.cpp -o exercise_4_15_v1_0_0
+      ```
+      
+    By following these steps, the `cpp_dec_float_50` object will display `pi` with enhanced precision, ensuring more accurate results for the exercise calculations.
