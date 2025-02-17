@@ -50,6 +50,19 @@ If a bug is fixed in the same solution:
 exercise_2_13_v1.1.1.cpp
 ```
 
+#### Note
+
+For any case, always create a new file for the respective updated solution to an existing exercise, e.g.:
+```plaintext
+cpp_how_to_program_11ed_deitel_exercises/
+├── ch03/
+│   ├── ...
+├── ch04/
+│   ├── exercise_4_11_v1_0_0.cpp
+│   ├── exercise_4_11_v1_1_0.cpp
+│   └── ...
+└── ...
+```
 ---
 
 ## 📜 Code Documentation
