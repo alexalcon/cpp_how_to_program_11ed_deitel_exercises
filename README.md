@@ -137,3 +137,12 @@ Some exercise descriptions feature a ✰ symbol, indicating that the exercise pr
  * -------------------------------------------------------------------------------------------------
  * Created on: 24-12-2024
  */
+```
+
+## 🤝 Contributions
+
+Contributions are welcome! If you have a better way to solve an exercise, found a mistake, or want to add a new exercise, check out the [Contributing Guidelines](CONTRIBUTING.md) for details on how to contribute to this repository.
+
+---
+
+This repository is an independent project and is not affiliated with Deitel & Deitel. It exists to assist learners in mastering Modern C++ programming concepts through practical exercises and solutions.
