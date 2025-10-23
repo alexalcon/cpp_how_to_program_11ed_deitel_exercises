@@ -33,3 +33,4 @@
 *.app
 
 # Ignore directories
+notes/*
