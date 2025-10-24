@@ -16,6 +16,8 @@ This repository contains selected solutions to exercises from [**_C++ How to Pro
 
 In line with the textbook’s emphasis on **Modern C++**—including C++20, C++17, C++14, and C++11—these exercises also look ahead to key features anticipated for C++23 and beyond. By exploring these solutions, you’ll gain insights into the evolving nature of the language, its best practices, and modern idioms that influence performance, security, and software engineering principles. For a more comprehensive understanding of the underlying philosophy and future direction of C++, consider reading the textbook’s preface in its entirety.
 
+---
+
 ## ⚙️ Setting Up the Development Environment
 
 The following guidelines are based on information provided in the textbook, as well as official documentation sources. For more detailed and clear information, readers are encouraged to refer to the following sections of the book:
@@ -87,6 +89,8 @@ For executing the code on Linux:
 ./exercise_2_13_v1_0_0
 ```
 
+---
+
 ## 📁 Repository File System Structure
 
 Each chapter from the Deitel & Deitel book is represented by a dedicated directory, such as `ch02/`, `chp03/`, etc. Within each chapter directory, you will find:
@@ -119,6 +123,8 @@ cpp_how_to_program_11ed_deitel_exercises/
 
 The `code_examples/` directory contains [official code examples](https://github.com/pdeitel/CPlusPlusHowToProgram11e) provided in the book. These examples showcase essential concepts and implementations discussed in the book chapters. By studying these examples, you can gain deeper insights into the techniques and practices covered in the text.
 
+---
+
 ## 📝 Site Notes
 
 ### ✰ Special Exercise Descriptions
@@ -138,6 +144,8 @@ Some exercise descriptions feature a ✰ symbol, indicating that the exercise pr
  * Created on: 24-12-2024
  */
 ```
+
+---
 
 ## 🤝 Contributions
 
