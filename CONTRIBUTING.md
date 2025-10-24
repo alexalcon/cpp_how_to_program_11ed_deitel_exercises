@@ -76,11 +76,11 @@ Each solution file must include the following header at the top:
  * File: <filename>
  * Author: <Your Name>
  * GitHub: <Your GitHub profile link>
- * ----------------------------------------------------------------------------------
+ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  * Description: <Brief description of the exercise>
  *
  * Additional Challenge: <Optional: List any additional challenges you implemented>
- * ----------------------------------------------------------------------------------
+ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  * Created on: <Date>
  * Last Updated: <Date> (If updating an existing solution)
  */
@@ -90,21 +90,27 @@ Each solution file must include the following header at the top:
 
 ```cpp
 /**
- * File: exercise_2_13_v1_0_0.cpp
+ * File: exercise_5_03_v1_1_0.cpp
  * Author: Alex Alcón
- * GitHub: https://github.com/alexalcon 
- * ----------------------------------------------------------------------------------------------
- * Description: (Printing) Write a program that prints the numbers 1 to 4 on the same line with
- *              each pair of adjacent numbers separated by one space. Do this in several ways:
- *           
- *                  a) Using one statement with one stream insertion operator.
- *                  b) Using one statement with four stream insertion operators.
- *                  c) Using four statements.
- * ----------------------------------------------------------------------------------------------
- * Created on: 29-02-2024
- * Last Updated: 01-03-2024
+ * GitHub: https://github.com/alexalcon
+ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ * Description: (Rounding Numbers) An application of function floor is rounding a value to the 
+ *              nearest integer. The statement
+ *              
+ *                  y = floor(x + 0.5);
+ *
+ *              rounds the number x to the nearest integer and assigns the result to y. Write a 
+ *              program that reads several numbers and uses the preceding statement to round 
+ *              each of these numbers to the nearest integer. For each number processed, print 
+ *              both the original number and the rounded number.
+ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ * Created on: 24-10-2025
  */
 ```
+
+**✰ Special Exercise Descriptions**
+
+Do not forget to include the ✰ symbol for some exercise descriptions, as stated in [✰ Special Exercise Descriptions](./README.md#special-exercise-descriptions), for exercises that present an interesting and somewhat challenging problem to tackle.
 
 ---
 
@@ -171,4 +177,3 @@ If you are new to Git or want to follow best practices for contributing to open-
 By contributing, you agree to abide by the repository’s [LICENSE](LICENSE).
 
 Thank you for contributing to this project!
-
