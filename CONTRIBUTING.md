@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-Thank you for considering contributing to this repository! Your contributions are vital in making this project a valuable resource for anyone studying "C++ How to Program: An Objects-Natural Approach, 11/e" by Deitel & Deitel. These guidelines will help you understand how to contribute effectively and maintain the organization and quality of the repository.
+Thank you for considering contributing to this repository! Your contributions are vital in making this project a valuable resource for anyone studying [**_C++ How to Program: An Objects-Natural Approach, 11/e_**](https://deitel.com/c-plus-plus-how-to-program-an-objects-natural-approach-11-e/) by Deitel & Deitel. These guidelines will help you understand how to contribute effectively and maintain the organization and quality of the repository.
 
 ---
 
