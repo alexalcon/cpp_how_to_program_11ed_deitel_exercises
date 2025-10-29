@@ -65,7 +65,7 @@ On Linux, C++ compiler availability and features vary depending on the distribut
      ```
   4. Once inside the container, navigate to a chapter exercises directory (e.g., `cd /usr/src/ch02/`) and compile as needed:
      ```bash
-     g++ -std=c++20 ./exercise_2_13_v1_0_0.cpp -o exercise_2_13_v1_0_0 
+     g++ -std=c++23 ./exercise_2_13_v1_0_0.cpp -o exercise_2_13_v1_0_0 
      ```
      
   These Docker-based instructions follow the recommendations and examples provided in the Deitel & Deitel text, ensuring access to an up-to-date compiler environment that supports Modern C++ standards.
@@ -76,7 +76,7 @@ Once installed the right compiller, just navigate to the directory containing th
 
 For compiling:
 ```bash
-g++ -std=c++20 exercise_2_13_v1_0_0.cpp -o exercise_2_13_v1_0_0 
+g++ -std=c++23 exercise_2_13_v1_0_0.cpp -o exercise_2_13_v1_0_0 
 ```
 
 For executing the code on Windows:
