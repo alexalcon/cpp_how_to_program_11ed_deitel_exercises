@@ -23,59 +23,71 @@
 
 using namespace std;
 
-int quotient(int a, int b);
-int remainder(int a, int b);
+int quotient(int a, int b);  // part a) function prototype
+int remainder(int a, int b); // part b) function prototype
+
+// part c)
+void printDigitsSpaced(int n) {
+    // start from the largest place value ≤ 32767 (i.e., 10000)
+    int d = 10000;
+    bool started = false;
+
+    while (d > 0) {
+        int q = quotient(n, d);     // current most-significant digit
+        if (started || q != 0 || d == 1) {
+            cout << q;
+            if (d != 1) cout << "  ";
+            started = true;
+        }
+        n = remainder(n, d);        // drop the digit we just printed
+        d = quotient(d, 10);        // move to next place value (divide by 10)
+    }
+    cout << '\n';
+}
 
 int main() {
-    cout << "quotient() FUNCTION TEST:\n";
-    cout << "--------------------------\n";
-    cout << format("1) Quotient of: {} / {}: {:>3}\n", 5, 3, quotient(5, 3));
-    cout << format("2) Quotient of: {} / {}: {:>3}\n", 17, 4, quotient(17, 4));
-    cout << format("3) Quotient of: {} / {}: {:>3}\n", 23, 5, quotient(23, 5));
-    cout << format("4) Quotient of: {} / {}: {:>3}\n", 50, 7, quotient(50, 7));
-    cout << format("5) Quotient of: {} / {}: {:>3}\n", 19, 8, quotient(19, 8));
-    cout << format("6) Quotient of: {} / {}: {:>3}\n", -10, 3, quotient(-10, 3));
-    cout << format("7) Quotient of: {} / {}: {:>3}\n", -23, -6, quotient(-23, -6));
-    cout << format("8) Quotient of: {} / {}: {:>3}\n", 29, -5, quotient(29, -5));
-    cout << "--------------------------\n";
-    
-    cout << "\nremainder() FUNCTION TEST:\n";
-    cout << "--------------------------\n";
-    cout << format("1) Remainder of: {} / {}: {:>3}\n", 5, 3, remainder(5, 3));
-    cout << format("2) Remainder of: {} / {}: {:>3}\n", 17, 4, remainder(17, 4));
-    cout << format("3) Remainder of: {} / {}: {:>3}\n", 23, 5, remainder(23, 5));
-    cout << format("4) Remainder of: {} / {}: {:>3}\n", 50, 7, remainder(50, 7));
-    cout << format("5) Quotient of: {} / {}: {:>3}\n", 19, 8, remainder(19, 8));
-    cout << format("6) Remainder of: {} / {}: {:>3}\n", -10, 3, remainder(-10, 3));
-    cout << format("7) Remainder of: {} / {}: {:>3}\n", -23, -6, remainder(-23, -6));
-    cout << format("8) Remainder of: {} / {}: {:>3}\n", 29, -5, remainder(29, -5));
-    cout << "--------------------------\n";
+    int n;
+
+    cout << "Enter an integer in [1, 32767]: ";
+    cin >> n;
+    // sentinel-controlled validation
+    while (n < 1 || n > 32767) {
+        cout << "Out of range. Enter an integer in [1, 32767]: ";
+        cin >> n;
+    }
+
+    printDigitsSpaced(n);
 
     return 0;
 }
 
+// helpers from parts (a) and (b) 
+//──────────────────────────────────────────────────────────────────────────────────────────────────
+// part a)
 int quotient(int a, int b) {
     // step 1: compute remainder using C++ semantics
     int r = a % b;
-
+    
     // step 2: adjust remainder to always be nonnegative
     // see 'Important Note' from ./INSIGHTS_ON_CHAPTER_SOLUTIONS.md
     // in section Exercise 5.12
     if (r < 0) {
         if (b > 0)
-            r += b;
+        r += b;
         else
-            r -= b;
+        r -= b;
     }
-
+    
     // step 3: compute quotient using the mathematical formula
     // see equation (1) from ./INSIGHTS_ON_CHAPTER_SOLUTIONS.md, 
     // in section 'Exercise 5.12'
     return (a - r) / b;
-
+    
 }
 
+// part b)
 int remainder(int a, int b) {
     return ( a - b*(quotient(a, b)) ); // see equation (2) from ./INSIGHTS_ON_CHAPTER_SOLUTIONS.md, 
-                                       // in section 'Exercise 5.12'
+    // in section 'Exercise 5.12'
 }
+//──────────────────────────────────────────────────────────────────────────────────────────────────
