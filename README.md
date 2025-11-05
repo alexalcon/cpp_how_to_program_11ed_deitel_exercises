@@ -145,6 +145,35 @@ Some exercise descriptions feature a ✰ symbol, indicating that the exercise pr
  */
 ```
 
+### 🧭 Chapter Insight Files (`INSIGHTS_ON_CHAPTER_SOLUTIONS.md`)
+
+Each chapter directory may include a file named **`INSIGHTS_ON_CHAPTER_SOLUTIONS.md`**.
+These files summarize **implementation features, theoretical connections, and design insights** derived from selected exercises of that specific chapter.
+
+They serve as a **meta-layer of understanding**, documenting:
+
+* The reasoning behind particular algorithmic or structural decisions.
+* Cross-references to mathematical or theoretical concepts (e.g., Division Theorem, Arithmetic, etc.).
+* References to textbooks or external sources that informed the implementation.
+* Notes on Modern C++ practices or performance considerations.
+* Highlight some errors made, for future avoid them.
+
+**Example (Chapter 05):**
+
+```plaintext
+cpp_how_to_program_11ed_deitel_exercises/
+├── ...
+├── ch05/
+│   ├── images
+│   │   ├── ...
+│   ├── exercise_5_01_v1_0_0.cpp
+│   ├── exercise_5_03_v1_0_0.cpp
+│   ├── exercise_5_03_v1_1_0.cpp
+│   ├── ...
+│   └── INSIGHTS_ON_CHAPTER_SOLUTIONS.md   ← Summarizes insights, theory references, and key design notes
+├── ...
+```
+
 ---
 
 ## 🤝 Contributions
