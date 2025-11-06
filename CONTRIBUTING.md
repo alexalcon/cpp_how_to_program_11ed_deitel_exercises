@@ -82,7 +82,7 @@ Each solution file must include the following header at the top:
  * Additional Challenge: <Optional: List any additional challenges you implemented>
  * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  * Created on: <Date>
- * Last Updated: <Date> (If updating an existing solution)
+ * Last Updated: <Date> (Just if updating an existing solution, i.e., no any version changes are added)
  */
 ```
 
