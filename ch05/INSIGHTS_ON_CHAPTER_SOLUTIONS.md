@@ -494,6 +494,10 @@ This formula allows us to find the **remainder** ==once the quotient $q$ is know
 
 ## **Exercise 5.16**
 
+![alt text](./images/exercise_5_16.png)
+
+---
+
 ### Divisors never exceed half of a number (except the number itself)
 
 Why divisors never exceed half of a number (except the number itself) connects arithmetic reasoning with algorithmic optimization?
