@@ -88,6 +88,6 @@ int quotient(int a, int b) {
 // part b)
 int remainder(int a, int b) {
     return ( a - b*(quotient(a, b)) ); // see equation (2) from ./INSIGHTS_ON_CHAPTER_SOLUTIONS.md, 
-    // in section 'Exercise 5.12'
+                                       // in section 'Exercise 5.12'
 }
 //──────────────────────────────────────────────────────────────────────────────────────────────────
