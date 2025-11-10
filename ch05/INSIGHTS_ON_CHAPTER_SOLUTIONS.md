@@ -81,6 +81,8 @@ int randomInteger(int min, int max) {
 
 a **critical bug** is identified! The `static uniform_int_distribution` in function `randomInteger()` is initialized only **once** with the first `min` and `max` values, then reuses those same bounds forever.
 
+---
+
 ### The Problem
 
 ```cpp
@@ -95,6 +97,8 @@ int randomInteger(int min, int max) {
 //   still uses [1, 2]! Never updates to [1, 100]
 ```
 
+---
+
 ### Why This Happens
 
 Static variables are initialized **only once** during the first function call:
@@ -104,6 +108,8 @@ static int x{getValue()};  // getValue() called ONCE, first time only
 ```
 
 Your subsequent calls with different `min/max` are ignored because the distribution already exists.
+
+---
 
 ### Performance Consideration
 
@@ -118,6 +124,8 @@ Creating a new distribution each call has minimal overhead. The expensive part i
 
 **The engine holds the complex state**; the distribution is just a lightweight wrapper that transforms the engine's output to your desired range.
 
+---
+
 ### Key Lesson
 This bug teaches us that **static initialization** happens exactly once, even if the initializer uses function parameters! ==This is a common pitfall when combining static with **parameterized initialization**==.
 
@@ -128,6 +136,8 @@ This bug teaches us that **static initialization** happens exactly once, even if
 
 ![alt text](./images/exercise_5_07.png)
 
+---
+
 ### Mathematical Formula Approach (Shifting & Scaling):
 - **Base value** (shift): The first element in the set
 - **Step size** (scale): The difference between consecutive elements
@@ -136,10 +146,14 @@ This bug teaches us that **static initialization** happens exactly once, even if
 **Formula**: 
 $$value = base + (step * random\_index)$$
 
+---
+
 ### Why This Works:
 1. Each set has 5 elements (indices 0-4).
 2. ==Elements follow arithmetic sequences/patterns.==
 3. Random index selection ensures equal probability.
+
+---
 
 ### Conceptual Summary
 
@@ -159,6 +173,7 @@ That’s the “shift + scale” idea you mentioned:
 ![alt text](./images/arithmetic_sequences.png)
 ***Reference:** [Precalculus: Mathematics for Calculus — James Stewart, Lothar Redlin, and Saleem Watson, 7th Ed, Ch. 12, §12.2]*
 
+---
 
 ### Error Disclaimer
 
@@ -185,6 +200,8 @@ That’s it—the error message about `__invalid_arg_id_in_format_string()` was 
 ![alt text](./images/exercise_5_12.png)
 
 For this exercise, **The Division Theorem** is used.
+
+---
 
 ### Division Theorem
 
@@ -443,7 +460,7 @@ This formula allows us to find the **remainder** ==once the quotient $q$ is know
 >* **C++ Behavior:**
 >
 >     * Integer division **truncates toward zero**, not toward negative infinity.
->     * The remainder `%` keeps the **same sign as the dividend** (`a`).
+>     * The remainder `%` keeps the **same sign as the dividend** ($a$).
 >     * Defined by:
 >       $$a == (a / b)b + (a \% b)$$
 >     * Example:
@@ -451,7 +468,7 @@ This formula allows us to find the **remainder** ==once the quotient $q$ is know
 >
 >* **Mismatch with Modular Arithmetic:**
 >  C++ `%` ≠ mathematical “mod”.
->  In math: ( -10 \bmod 3 = 2 )
+>  In math: ($-10 \bmod 3 = 2$)
 >  In C++: `-10 % 3 == -1`
 >
 >* **To get a true modulus (always positive):**
@@ -462,8 +479,7 @@ This formula allows us to find the **remainder** ==once the quotient $q$ is know
 >
 >**Key takeaway:**
 >
-> C++ `%` gives a **signed remainder**, not a **mathematical modulus**.
-> Use the above correction if you need a nonnegative (modular) result.
+> C++ `%` gives a **signed remainder**, not a **mathematical modulus**. Use the above correction if you need a nonnegative (modular) result.
 
 ---
 
@@ -473,3 +489,291 @@ This formula allows us to find the **remainder** ==once the quotient $q$ is know
 | ---------- | ------------------------ | --------------------------------------- |
 | Quotient   | $q = \dfrac{a - r}{b}$ | Expresses $q$ in terms of $a, b, r$ |
 | Remainder  | $r = a - bq$           | Expresses $r$ in terms of $a, b, q$ |
+
+--- 
+
+## **Exercise 5.16**
+
+### Divisors never exceed half of a number (except the number itself)
+
+Why divisors never exceed half of a number (except the number itself) connects arithmetic reasoning with algorithmic optimization?
+
+---
+
+#### Step 1: Recall the definition of a divisor
+
+An integer $d$ is a **divisor** of  $n$ if and only if
+
+$$
+n = d \times q
+$$
+
+for some integer $q$.
+
+That means: $d$ divides $n$ **exactly**, leaving no remainder.
+
+---
+
+#### Step 2: Rewriting the divisor condition
+
+If $d$ divides $n$, then
+
+$$
+q = \frac{n}{d}
+$$
+
+and both $d$ and $q$ are positive integers satisfying
+$$
+1 \le d \le n, \quad 1 \le q \le n
+$$
+and together they form a **factor pair** $(d, q)$.
+
+For example, for $n = 12$:
+$$
+12 = 1\times12 = 2\times6 = 3\times4
+$$
+So the **factor pairs** are:
+$$
+(1,12),\ (2,6),\ (3,4)
+$$
+
+---
+
+#### Proof: Understanding Why $1 \le d \le n$ and $1 \le q \le n$
+
+##### 1. Definition of Divisibility
+
+For any two integers $a, b$, we say that:
+
+> $a$ **divides** $b$ (written $a \mid b$) if and only if there exists an integer $k$ such that
+
+$$
+b = a \times k
+$$
+
+In this relation:
+
+* $a$ is a **divisor** of $b$
+* $b$ is a **multiple** of $a$
+* $k$ is the **quotient**
+
+**Example:**
+$$
+12 = 3 \times 4 \quad \Rightarrow \quad 3 \mid 12
+$$
+
+##### 2. Restricting to Positive Integers
+
+When we study *divisors* or *perfect numbers*, we work in the **positive integer domain**:
+
+$$
+a, b, k \in \mathbb{N}, \quad b > 0
+$$
+
+Replacing variables with standard notation for divisors:
+
+$$
+n = d \times q
+$$
+
+Where:
+
+* $n$: the number being analyzed
+* $d$: a divisor of $n$
+* $q$: the corresponding quotient
+
+##### 3. Determining the Range of Possible Values
+
+Both $d$ and $q$ are **positive integers** that satisfy $n = d \times q$.
+We’ll now find their **minimum** and **maximum** values.
+
+###### (a) Minimum Possible Divisor
+
+The smallest possible divisor of $n$ is **1**, since:
+
+$$
+n = 1 \times n
+$$
+
+Hence:
+
+$$
+d_{\min} = 1, \quad q_{\max} = n
+$$
+
+###### (b) Maximum Possible Divisor
+
+The largest possible divisor is the number itself:
+
+$$
+n = n \times 1
+$$
+
+So:
+
+$$
+d_{\max} = n, \quad q_{\min} = 1
+$$
+
+##### 4. Therefore, the Ranges Are
+
+$$
+1 \le d \le n, \quad 1 \le q \le n
+$$
+
+Each valid pair $(d, q)$ satisfies:
+
+$$
+n = d \times q
+$$
+
+and divisors always appear in **pairs** $(d, q)$ that multiply to $n$.
+
+##### 5. Symmetry Between ( d ) and ( q )
+
+Since $n = d \times q$ implies $n = q \times d$, the relationship is **symmetric**.
+Thus, if $d$ is small, $q$ is large — and vice versa.
+
+| $d$ | $q = n/d$ | Product |
+| :-: | :-------: | :-----: |
+|  1  |     12    |    12   |
+|  2  |     6     |    12   |
+|  3  |     4     |    12   |
+|  4  |     3     |    12   |
+|  6  |     2     |    12   |
+|  12 |     1     |    12   |
+
+##### 6. Why No Proper Divisor Exceeds ( n/2 )
+
+If $d > \frac{n}{2}$, then:
+
+$$
+2d > n
+$$
+
+meaning $d$ multiplied by any integer $\ge 2$ will exceed $n$.
+The only integer $q$ satisfying $d \times q = n$ would be $q = 1$,
+which gives $d = n$.
+
+Hence, **no proper divisor** (excluding $n$ itself) can exceed $n/2$.
+
+##### 7. Summary
+
+| Concept              | Statement                                    |
+| :------------------- | :------------------------------------------- |
+| Divisibility         | $n = d \times q$ for integers ( d, q > 0 ) |
+| Always true          | $1 \le d, q \le n$                         |
+| Smallest pair        | $(1, n)$                                   |
+| Largest pair         | $(n, 1)$                                   |
+| Proper divisor range | $1 \le d \le \frac{n}{2}$                  |
+| Beyond ( n/2 )       | Only $d = n$ (since $q = 1$)             |
+
+##### 8. Intuitive Visualization
+
+```
+n = d × q
+
+↓   ↓
+small large
+large small
+```
+
+**Factor pairs example:**
+$$
+(1, n),\ (2, n/2),\ (3, n/3), \dots, (\sqrt{n}, \sqrt{n}), \dots, (n, 1)
+$$
+
+As soon as $d > n/2$,
+the quotient becomes $q < 2 \Rightarrow q = 1$, leaving only $d = n$ as a valid case.
+
+---
+
+#### Step 3: Understanding the “half” boundary
+
+Notice something:
+
+* In each factor pair, one element is **less than or equal to $\sqrt{n}$**,
+* and the other is **greater than or equal to $\sqrt{n}$**.
+
+Now, if we focus only on **divisors smaller than the number itself**,
+that means we exclude $d = n$.
+
+So the largest possible divisor less than $n$ must satisfy:
+
+$$
+d \times 2 \le n
+$$
+i.e.
+$$
+d \le \frac{n}{2}
+$$
+
+**Why is that true?**
+
+Suppose $d > \frac{n}{2}$.
+Then multiply both sides by 2:
+
+$$
+2d > n
+$$
+
+This implies $d \times 2 > n$,
+which means there’s **no integer $q \ge 2$** satisfying $d \times q = n$.
+
+The only possible integer $q$ that could make $d \times q = n$ true is $q = 1$.
+That would give $d = n$.
+
+Hence:
+
+* if $d > n/2$, the only multiple of $d$ less than or equal to $n$ is $d \times 1 = d = n$.
+* Therefore, **no proper divisor** (excluding $n$ itself) can be greater than $n/2$.
+
+---
+
+#### Step 4: Example verification
+
+Take $n = 20$:
+
+| $d$  | $20 / d$ | Is divisor?      |
+| ----- | -------- | ---------------- |
+| 1     | 20       | ✅                |
+| 2     | 10       | ✅                |
+| 3     | 6.66     | ❌                |
+| 4     | 5        | ✅                |
+| 5     | 4        | ✅                |
+| 6     | 3.33     | ❌                |
+| 7     | 2.85     | ❌                |
+| 8     | 2.5      | ❌                |
+| 9     | 2.22     | ❌                |
+| 10    | 2        | ✅                |
+| 11–19 | < 2      | ❌                |
+| 20    | 1        | ✅ (but excluded) |
+
+→ The largest *proper divisor* is $10 = n/2$.
+→ None beyond $n/2$ divide $n$.
+
+---
+
+#### Step 5: Algorithmic insight
+
+This is why in the loop we can safely write:
+
+```cpp
+for (int divisor = 1; divisor <= number / 2; ++divisor)
+```
+
+Because:
+
+* Any divisor greater than $number / 2$ would require a quotient $q < 2$,
+* which implies $q = 1 \Rightarrow divisor = number$,
+* and that’s excluded when checking *proper divisors* (since we don’t include the number itself).
+
+---
+
+#### Summary Note
+
+> A positive integer $d$ divides $n$ if $n = dq$ for some integer $q$.
+> If $d > n/2$, then $q < 2$, meaning $q = 1$ and $d = n$.
+> Therefore, no **proper divisor** of $n$ can exceed $n/2$.
+
+That’s why in the perfect-number algorithm, you only need to test divisors up to $n/2$ — it’s mathematically complete and computationally efficient.
