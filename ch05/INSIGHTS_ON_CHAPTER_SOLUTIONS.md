@@ -781,3 +781,17 @@ Because:
 > Therefore, no **proper divisor** of $n$ can exceed $n/2$.
 
 That’s why in the perfect-number algorithm, you only need to test divisors up to $n/2$ — it’s mathematically complete and computationally efficient.
+
+---
+
+## **Exercise 5.17**
+
+![alt text](./images/exercise_5_17.png)
+
+The mathematical theory background that answers the question stated in `part c)`, can be studied in this theorem: 
+
+> ![alt text](./images/sieve_of_Eratosthenes_theorem_01.png)
+> ![alt text](./images/sieve_of_Eratosthenes_theorem_02.png)
+> ***Reference:** [Introdução à Teoria dos Números — José Plínio de Oliveira Santos, Ch. 1, §1.6]*
+
+---
