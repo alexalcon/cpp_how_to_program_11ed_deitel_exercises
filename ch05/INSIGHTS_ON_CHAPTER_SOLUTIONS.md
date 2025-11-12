@@ -795,3 +795,14 @@ The mathematical theory background that answers the question stated in `part c)`
 > ***Reference:** [Introdução à Teoria dos Números — José Plínio de Oliveira Santos, Ch. 1, §1.6]*
 
 ---
+
+## **Exercise 5.19**
+
+![alt text](./images/exercise_5_19.png)
+
+The mathematical theory background to understand **Euclid's Algorithm** can be studied in the following resource:
+
+> ![alt text](./images/euclid's_algorithm.png)
+> ***Reference:** [A Concrete Introduction to Higher Algebra — Lindsay N. Childs, 3rd Ed, Ch. 3, §C] - It is recomended to read the whole chapter in order to understand deeply the algorithm.*
+
+---
