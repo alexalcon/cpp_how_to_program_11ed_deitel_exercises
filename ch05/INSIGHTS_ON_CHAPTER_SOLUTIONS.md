@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This document presents a collection of technical insights, implementation notes, and design considerations derived from the solutions to selected exercises from [**_C++ How to Program: An Objects-Natural Approach, 11/e_**](https://deitel.com/), for this chapter. Each section corresponds to a specific chapter exercise and highlights the reasoning, algorithmic choices, and language features employed during problem solving. The purpose of this file is to consolidate key observations that strengthen understanding of core C++ concepts, the technical and formal theory implemented in each solution, promote clean and efficient coding practices, and serve as a quick reference for future review and continuous improvement.
+This document presents a collection of technical insights, implementation notes, and design considerations derived from the solutions to selected exercises from [**_C++ How to Program: An Objects-Natural Approach, 11/e_**](https://deitel.com/c-plus-plus-how-to-program-an-objects-natural-approach-11-e/), for this chapter (chapter 5). Each section corresponds to a specific chapter exercise and highlights the inductive and/or deductive logic reasoning, algorithmic choices, and language features employed during problem solving. The purpose of this file is to consolidate key observations that strengthen understanding of core C++ concepts, the technical and formal theory implemented in each solution, promote clean and efficient coding practices (in both contexts, technical topics and framing clear documentation), and serve as a quick reference for future review and continuous improvement.
 
 ---
 
