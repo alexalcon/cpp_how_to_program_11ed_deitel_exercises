@@ -806,3 +806,53 @@ The mathematical theory background to understand **Euclid's Algorithm** can be s
 > ***Reference:** [A Concrete Introduction to Higher Algebra — Lindsay N. Childs, 3rd Ed, Ch. 3, §C] - It is recomended to read the whole chapter in order to understand deeply the algorithm.*
 
 ---
+
+## **Exercise 5.23**
+
+![alt text](./images/exercise_5_23.png)
+
+---
+
+### Why 10 Guesses Are Enough (First-Principles Intuition)
+
+**Idea**: if the player always guesses **smartly**, each guess can **eliminate about half** the remaining possibilities — like a binary search.
+
+1. Initially, the number is in the range ($[1, 1000]$), so there are 1000 possibilities.
+2. After one well-chosen guess (e.g., the middle), the response “Too high” or “Too low” cuts the range roughly in half:
+
+   * from 1000 → about 500 possible numbers left.
+3. Repeating this halving:
+
+   * $After\ 1st\ guess ≤ 500\ possibilities$
+   * $2nd:\ ≤ 250$
+   * $3rd:\ ≤ 125$
+   * $4th:\ ≤ 62$
+   * $5th:\ ≤ 31$
+   * $6th:\ ≤ 16$
+   * $7th:\ ≤ 8$
+   * $8th:\ ≤ 4$
+   * $9th:\ ≤ 2$
+   * $10th:\ ≤ 1$  (you’ve pinned down the exact number)
+
+Mathematically, after $(k)$ optimal guesses, the maximum remaining possibilities are about:
+
+$$
+\frac{1000}{2^k}
+$$
+
+We want:
+
+$$
+\frac{1000}{2^k} \le 1
+\quad \Rightarrow \quad
+2^k \ge 1000
+$$
+
+Now:
+
+* $(2^9 = 512)$
+* $(2^{10} = 1024 \ge 1000)$
+
+So $(k = 10)$ guesses is enough to reduce the possibilities to **1 number**, meaning **any number from 1 to 1000 can be found in at most 10 optimal guesses**.
+
+---
