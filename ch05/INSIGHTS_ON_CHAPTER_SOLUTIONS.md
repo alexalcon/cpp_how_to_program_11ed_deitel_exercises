@@ -171,7 +171,7 @@ That’s the “shift + scale” idea you mentioned:
 * **Scale** = common difference
 
 ![alt text](./images/arithmetic_sequences.png)
-***Reference:** [Precalculus: Mathematics for Calculus — James Stewart, Lothar Redlin, and Saleem Watson, 7th Ed, Ch. 12, §12.2]*
+***Reference:** [Precalculus: Mathematics for Calculus — James Stewart, Lothar Redlin, and Saleem Watson, 7th Ed, Ch. 12 Sequences and Series, §12.2 Arithmetic Sequences]*
 
 ---
 
@@ -221,10 +221,10 @@ $$
 > **Note**: Remember that, by definition of congruence modulo $m$ in $\mathbb{Z}$:  
 >
 >![alt text](./images/congruence_mod_m_def.png)
-> ***Reference:** [A Concrete Introduction to Higher Algebra — Lindsay N. Childs, 3rd Ed, Ch. 5, §A]*
+> ***Reference:** [A Concrete Introduction to Higher Algebra — Lindsay N. Childs, 3rd Ed, Ch. 5 Congruence, §A Congruence Modulo m]*
 > 
 > ![alt text](./images/congruence_and_congruence_classes.png) 
-> ****Reference:** [Abstract Algebra: An Introduction* — Thomas W. Hungerford, 3rd Ed, Ch. 2, §2.1]*
+> ****Reference:** [Abstract Algebra: An Introduction* — Thomas W. Hungerford, 3rd Ed, Ch. 2 Congruence in $\mathbb{Z}$ and Modular Arithmetic, §2.1 Congruence and Congruence Classes]*
 >
 > the quotient $q$ in [(1)](#equation-quotient) is an integer number.
 
@@ -792,7 +792,7 @@ The mathematical theory background that answers the question stated in `part c)`
 
 > ![alt text](./images/sieve_of_Eratosthenes_theorem_01.png)
 > ![alt text](./images/sieve_of_Eratosthenes_theorem_02.png)
-> ***Reference:** [Introdução à Teoria dos Números — José Plínio de Oliveira Santos, Ch. 1, §1.6]*
+> ***Reference:** [Introdução à Teoria dos Números — José Plínio de Oliveira Santos, Ch. 1 Divisibilidade, §1.6 Números Primos]*
 
 ---
 
@@ -803,7 +803,7 @@ The mathematical theory background that answers the question stated in `part c)`
 The mathematical theory background to understand **Euclid's Algorithm** can be studied in the following resource:
 
 > ![alt text](./images/euclid's_algorithm.png)
-> ***Reference:** [A Concrete Introduction to Higher Algebra — Lindsay N. Childs, 3rd Ed, Ch. 3, §C] - It is recomended to read the whole chapter in order to understand deeply the algorithm.*
+> ***Reference:** [A Concrete Introduction to Higher Algebra — Lindsay N. Childs, 3rd Ed, Ch. 3 Euclid’s Algorithm, §C Euclid’s Algorithm] - It is recomended to read the whole chapter in order to understand deeply the algorithm.*
 
 ---
 
@@ -856,3 +856,38 @@ Now:
 So $(k = 10)$ guesses is enough to reduce the possibilities to **1 number**, meaning **any number from 1 to 1000 can be found in at most 10 optimal guesses**.
 
 ---
+
+## **Exercise 5.24**
+
+![alt text](./images/exercise_5_24.png)
+
+---
+
+According to this definition: 
+
+>![alt text](./images/recursive_definition.png)
+> ***Reference:** [Elementary Number Theory and its Applications — Kenneth H. Rosen, 6th Ed, Ch. 1 The Integers, §1.3 Mathematical Induction]*
+
+Let  
+
+$$
+f(n)=b^{n}, \qquad n\in \mathbb{N},\; b\in\mathbb{Z}
+$$
+
+Then  
+
+$$
+f(n+1)=b^{n+1}=b^{n}\cdot b^{1}
+$$
+
+Base case:
+
+$$
+f(1)=b^{1}
+$$
+
+Recursive rule:
+
+$$
+f(n)=b^{\,n-1}\cdot b^{1}
+$$
