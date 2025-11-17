@@ -891,3 +891,161 @@ Recursive rule:
 $$
 f(n)=b^{\,n-1}\cdot b^{1}
 $$
+
+---
+
+## **Exercise 5.26**
+
+![alt text](./images/exercise_5_26_01.png)
+![alt text](./images/exercise_5_26_02.png)
+
+--- 
+
+For a reference idea on how the recursive idea of this algorithm can be analyzed consider the following problem:
+
+> ![alt text](./images/towers_of_hanoi_problem.png)
+>![alt text](./images/recursive_definition.png)
+> ***Reference:** [Elementary Number Theory and its Applications — Kenneth H. Rosen, 6th Ed, Ch. 1 The Integers, §1.3 Mathematical Induction (Exercises section)]*
+
+### Proof: Minimum Moves for the Towers of Hanoi is \(2^n - 1\)
+
+Let \(T(n)\) denote the minimum number of moves needed to transfer \(n\) rings from one peg to another, following the rules of the Tower of Hanoi.
+
+We want to prove:
+
+$$
+T(n) = 2^n - 1.
+$$
+
+---
+
+#### Base Case: \(n = 1\)
+
+For one ring, the only legal move is to transfer it directly to the target peg.
+
+Thus:
+
+$$
+T(1) = 1.
+$$
+
+And the formula gives:
+
+$$
+2^1 - 1 = 1.
+$$
+
+So the base case holds.
+
+---
+
+#### Induction Step
+
+**Induction Hypothesis:**  
+Assume that for some integer \(k \ge 1\),
+
+$$
+T(k) = 2^k - 1.
+$$
+
+We must prove:
+
+$$
+T(k+1) = 2^{k+1} - 1.
+$$
+
+---
+
+#### Step 1: Move \(k\) rings out of the way
+
+To move the largest ring (the \((k+1)\)-th ring), the smaller \(k\) rings must be moved from peg A to peg C.
+
+By the induction hypothesis, this takes:
+
+$$
+T(k) = 2^k - 1 \quad \text{moves}.
+$$
+
+---
+
+#### Step 2: Move the largest ring
+
+Move the \((k+1)\)-th ring from peg A to peg B:
+
+$$
+1 \quad \text{move}.
+$$
+
+---
+
+#### Step 3: Move the \(k\) rings onto the largest ring
+
+Move the \(k\) rings from peg C to peg B.  
+By the induction hypothesis:
+
+$$
+T(k) = 2^k - 1.
+$$
+
+---
+
+#### Compute the total:
+
+\[
+\begin{aligned}
+T(k+1)
+&= (2^k - 1) + 1 + (2^k - 1) \\
+&= 2^{k+1} - 1.
+\end{aligned}
+\]
+
+Thus:
+
+$$
+T(k+1) = 2^{k+1} - 1.
+$$
+
+---
+
+#### Conclusion
+
+By mathematical induction, for all \(n \ge 1\):
+
+$$
+\boxed{T(n) = 2^n - 1}.
+$$
+
+---
+
+### Part (b): How long will the world last?
+
+For \(n = 64\):
+
+$$
+T(64) = 2^{64} - 1 = 18\,446\,744\,073\,709\,551\,615.
+$$
+
+At one move per second:
+
+$$
+\text{years} \approx 
+\frac{2^{64}-1}{31\,536\,000}
+\approx 5.85 \times 10^{11}.
+$$
+
+So the legend predicts:
+
+$$
+\boxed{\text{The world ends in about } 585 \text{ billion years.}}
+$$
+
+---
+
+> To explore a **visual, step-by-step depiction** of the recursive solution implemented in
+> `exercise_5_26_v1_0_0.cpp`, refer to the interactive HTML file located at:
+> `./ch05/towers_of_hanoi_recursion_visualization.html`.
+>
+> You can view the visualization by opening the file directly in your browser (i.e., using your browser app), or by serving it locally using the **Live Server** extension for VS Code:
+> [https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+
+---
