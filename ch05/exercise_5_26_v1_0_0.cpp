@@ -27,6 +27,7 @@
  */
 
 #include <iostream>
+#include <cmath>
 #include <format>
 
 using namespace std;
@@ -93,20 +94,18 @@ void testTowersOfHanoi() {
     cout << "Solution for 3 disks (moving from peg 1 to peg 3):\n";
     cout << "--------------------------------------------------\n";
     towersOfHanoi(3, 1, 3, 2);
-    
     cout << "\n";
     
     // test with 4 disks (as shown in the diagram)
     cout << "Solution for 4 disks (moving from peg 1 to peg 3):\n";
     cout << "--------------------------------------------------\n";
     towersOfHanoi(4, 1, 3, 2);
-    
     cout << "\n";
     
     // interactive mode
     // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     cout << "Interactive Mode:\n";
-    cout << "-------------------------------------------\n";
+    cout << "--------------------------------------------------\n";
     
     int disks;
     cout << "Enter the number of disks (1-10 recommended): ";
@@ -120,11 +119,16 @@ void testTowersOfHanoi() {
    
     cout << format("\nSolution for {} disk{} (moving from peg 1 to peg 3):\n", 
                    disks, (disks == 1 ? "" : "s"));
-    cout << "-------------------------------------------\n";
+    cout << "--------------------------------------------------\n";
     towersOfHanoi(disks, 1, 3, 2);
     
     // calculate and display the total number of moves
-    int totalMoves = (1 << disks) - 1; // 2^n - 1
+    // ───────────────────────────────────────────────────────────────────────────
+    // see section 'Exercise 5.26' from ../INSIGHTS_ON_CHAPTER_SOLUTIONS.md
+    // to understand why (but not how) this mathematical formula calculates
+    // the minimum number of moves to transfer 'n' rings from one peg to another 
+    // ───────────────────────────────────────────────────────────────────────────
+    int totalMoves = ( pow(2, disks) ) - 1; // 2^n - 1
     cout << format("\nTotal number of moves: {}\n", totalMoves);
     
     // fun fact about the 64-disk problem
