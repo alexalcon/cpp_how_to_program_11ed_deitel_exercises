@@ -145,10 +145,10 @@ Some exercise descriptions feature a ✰ symbol, indicating that the exercise pr
  */
 ```
 
-### 🧭 Chapter Insight Files (`INSIGHTS_ON_CHAPTER_SOLUTIONS.md`)
+### 🧭 Chapter Insights & Technical Documentation
 
-Each chapter directory may include a file named **`INSIGHTS_ON_CHAPTER_SOLUTIONS.md`**.
-These files summarize **implementation features, theoretical connections, and design insights** derived from selected exercises of that specific chapter.
+Chapter 5 directory includes a file named **`INSIGHTS_ON_CHAPTER_SOLUTIONS.md`**.
+This file summarize **implementation features, theoretical connections, and design insights** derived from selected exercises of the chapter.
 
 They serve as a **meta-layer of understanding**, documenting:
 
@@ -173,6 +173,86 @@ cpp_how_to_program_11ed_deitel_exercises/
 │   └── INSIGHTS_ON_CHAPTER_SOLUTIONS.md   ← Summarizes insights, theory references, and key design notes
 ├── ...
 ```
+
+>**Important Update (November 2025):** Starting from Chapter 6 onwards, all technical notes, theoretical explanations, and implementation insights are now documented in a dedicated Notion workspace for enhanced accessibility and organization. Some of the contents in `./ch05/INSIGHTS_ON_CHAPTER_SOLUTIONS.md` are maintained itslef in that file and reframed in its respective Notion page website. And regarding chapters 2, 3 and 4, this same dynamic is mantained but directly implemented in their respective Notion pages website, since this feature was thought in chapter 5. 
+
+#### 📚 Notion Workspace: Chapter Insights
+
+All detailed documentation including:
+
+- **Technical Implementation Deep-Dives** – Comprehensive exploration of algorithmic approaches, data structures, and code architecture decisions.
+- **Theoretical Foundations** – Mathematical principles, computer science theory, and conceptual frameworks underlying the solutions.
+- **Design Decisions & Trade-offs** – In-depth analysis of implementation choices, performance considerations, and alternative approaches.
+- **Common Pitfalls & Best Practices** – Documented lessons learned, debugging strategies, and recommended coding patterns.
+- **Robotics/ROS Applications** – Real-world connections to robotics development and ROS integration patterns.
+- **Control Algorithms Applied to Robotics** - Real-world examples of control algorithms applied to software development of robotics applications. 
+- **Embedded Systems Applied to Robotics Topics** - Real-world insights on embedded software development for robotics applications.
+
+...can be accessed here:
+
+**🔗 [C++ Deitel Exercises - Technical Insights & Notes](https://fate-axolotl-685.notion.site/29a755efc7a58047ad5fd6374774a9e6?v=2b0755efc7a580409ccf000c4ed671f9&source=copy_link)**
+
+#### Rationale for Migration to Notion
+
+The transition from inline markdown documentation to Notion provides several key advantages:
+
+**1. Enhanced Organization & Navigation**
+   - Hierarchical page structure with nested content.
+   - Database views for filtering exercises by difficulty, topic, or chapter.
+   - Table of contents with anchor links for quick navigation.
+   - Tag-based categorization (e.g., #algorithms, #data-structures, #memory-management).
+
+**2. Superior Content Presentation**
+   - Rich text formatting with collapsible sections.
+   - Syntax-highlighted code blocks with language-specific rendering.
+   - Embedded diagrams, flowcharts, and visual explanations.
+   - Side-by-side code comparisons.
+   - Math equation rendering using LaTeX.
+
+**3. Improved Discoverability & Search**
+   - Full-text search across all notes.
+   - Quick jump to specific concepts or implementation patterns.
+   - Cross-referencing between related topics across chapters.
+
+**4. Dynamic & Living Documentation**
+   - Easy to update as understanding deepens.
+   - Collaborative editing capabilities.
+   - Comment threads for discussion.
+
+**5. Multimedia Integration**
+   - Embedded videos for complex algorithm visualizations
+   - Interactive diagrams and animations
+   - Screenshots of debugging sessions or development environment setups
+
+#### Contributing to Documentation
+
+Your insights and contributions are welcome! You can:
+
+- **Request Clarifications:** If any Notion documentation is unclear, open an issue with the specific page/concept.
+- **Suggest Additions:** Recommend topics that deserve deeper exploration.
+- **Report Errors:** Help maintain documentation accuracy by flagging technical mistakes.
+
+For direct contributions to the Notion workspace, contact me via:
+- GitHub Issues: `https://github.com/alexalcon/cpp_how_to_program_11ed_deitel_exercises/issues`
+- GitHub Profile: `https://github.com/alexalcon`
+
+#### ⚡ **TL;DR**
+
+>* **Insights Files (`INSIGHTS_ON_CHAPTER_SOLUTIONS.md`)**: Just chapter 5 includes an insights file summarizing more in deep design decisions, theoretical references, mistakes made, and implementation notes on some selected exercises.
+>* **Migration to Notion**: Starting from Chapter 6 (i.e., just chapter 5 includes an (`INSIGHTS_ON_CHAPTER_SOLUTIONS.md`) file), all technical explanations, theory, and design notes are documented in a dedicated **Notion workspace** for better organization and readability. Chapters 2–4 already follow this workflow via their Notion pages.
+>* **Notion Advantages**: Better structure, richer formatting, searchable content, interactive elements, diagrams, and living documentation.
+>* **What You’ll Find in Notion**: Deep dives into algorithms, theoretical foundations, design trade-offs, best practices, pitfalls, and robotics/ROS applications.
+>* **The Notion page website** can be accessed here: 🔗 **[C++ Deitel Exercises - Technical Insights & Notes](https://fate-axolotl-685.notion.site/29a755efc7a58047ad5fd6374774a9e6?v=2b0755efc7a580409ccf000c4ed671f9&source=copy_link)**
+
+### Personal Chapter Study Notes
+In addition to exercise-specific insights, the same Notion workspace also contains my personal theoretical notes and key takeaways from each book chapter. These notes include:
+
+- Condensed summaries of chapter concepts.
+- Personal interpretations and connections to robotics applications.
+- Highlighted important definitions and principles.
+- Quick reference guides for chapter topics.
+
+These study notes complement the exercise solutions and provide additional context for understanding the broader chapter themes. All chapter notes are organized in the same Notion workspace under dedicated chapter sections.
 
 ---
 
