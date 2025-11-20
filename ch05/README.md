@@ -63,3 +63,118 @@ It is intended to:
 * Demonstrate attention to detail and teaching-oriented documentation.
 
 ---
+
+# Exercise 5.28 (Visualizing Recursion)
+
+## Compiling and Executing Code with the Boost Multiprecision `cpp_int` Library
+
+Exercise 5.28 requires the use of the Boost Multiprecision `cpp_int` type for arbitrary-precision integer computations. For convenience, the Boost library is included at:
+
+```
+code_examples/CPlusPlusHowToProgram11e/libraries/multiprecision-Boost_1_80_0
+```
+
+This exercise relies on a custom header:
+
+```
+./ch05/cppintformatter.h
+```
+
+This header enables **C++20-style `std::format` support for `cpp_int` objects**, since Boost Multiprecision does not natively support the `{}` formatting syntax.
+
+---
+
+### Using the Custom Header `cppintformatter.h`
+
+The file:
+
+```
+ch05/cppintformatter.h
+```
+
+implements a custom formatter that:
+
+* Allows `std::format("{:d}", cpp_int_object)`.
+* Internally uses classic stream manipulators (`fixed`, `setprecision`, etc.).
+* Makes the recursive-visualization exercise cleaner when printing large integers.
+
+Just include it in the file:
+
+```cpp
+#include "cppintformatter.h"
+```
+
+No additional configuration is needed beyond including this header.
+
+---
+
+### Compiling and Running the Code in Microsoft Visual Studio
+
+1. Create a new project.
+2. Add the exercise source file from the `ch05` directory.
+3. Right-click the project name → **Properties…**
+4. Under **Configuration Properties > C/C++ > General**, edit
+   **Additional Include Directories**.
+5. Add the `include` directory of Boost Multiprecision:
+
+```
+.../multiprecision-Boost_1_80_0/include
+```
+
+6. Ensure that the local header folder `ch05` is part of the project so
+   `cppintformatter.h` is detected automatically.
+7. Press **Ctrl + F5** to compile and execute.
+
+Visual C++ may emit warnings inside Boost headers — these can be ignored.
+
+---
+
+## Compiling and Running the Code in GNU `g++`
+
+1. Open a terminal and move to the `ch05` folder:
+
+```bash
+cd ch05
+```
+
+2. Compile the program using the `-I` flag to include the Boost headers:
+
+```bash
+g++ -std=c++20 \
+    -I ../code_examples/CPlusPlusHowToProgram11e/libraries/multiprecision-Boost_1_80_0/include \
+    exercise_5_28_v1_0_0.cpp -o exercise_5_28_v1_0_0
+```
+
+3. Run the program:
+
+```bash
+./exercise_5_28_v1_0_0
+```
+
+This ensures:
+
+* Boost’s `cpp_int` is detected
+* Your local header `cppintformatter.h` is used for formatting
+* C++20 features (such as `std::format`) are available
+
+---
+
+### Notes on `cpp_int` Formatting in ch05
+
+* The `cpp_int` type does **not** support C++20 formatting without custom specialization.
+* The provided file `cppintformatter.h` defines the required formatter specialization for:
+
+```cpp
+std::formatter<boost::multiprecision::cpp_int>
+```
+
+* This allows use of formatting expressions like:
+
+```cpp
+std::format("Result: {}", bigInteger);
+```
+
+* This header is required for **exercise_5_28_v1_0_0.cpp** and any other file
+  printing arbitrary-precision integers using `std::format`.
+
+---
