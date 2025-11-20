@@ -46,14 +46,10 @@ g++ -std=c++20 -I ../code_examples/CPlusPlusHowToProgram11e/libraries/multipreci
 
 ## C++20 Text Formatting and cpp_dec_float_50 Objects
 
-Boost Multiprecision types do not yet support C++20 text formatting with placeholders like `{:.2f}` that round a floating-point number to a specified precision. However, these types 
-do support the old-style C++ formatting with the `fixed` and `setprecision` stream manipulators as used in `ch03`. It’s also possible to customize C++20 text formatting for custom class types.
-So, for exercises where the Boost Multiprecision library is employed, a header file `decimalformatter.h` (utilized and defined in the book's section 4.14) is used as a custom formatting 
-that enables format to get a string representation of a `cpp_dec_float_50` object rounded to two digits of precision. 
+Boost Multiprecision types do not yet support C++20 text formatting with placeholders like `{:.2f}` that round a floating-point number to a specified precision. However, these types do support the old-style C++ formatting with the `fixed` and `setprecision` stream manipulators as used in `ch03`. It’s also possible to customize C++20 text formatting for custom class types. So, for exercises where the Boost Multiprecision library is employed, a header file `decimalformatter.h` (utilized and defined in the book's section 4.14) is used as a custom formatting that enables format to get a string representation of a `cpp_dec_float_50` object rounded to two digits of precision. 
 
-This custom formatter uses the `fixed` and `setprecision` stream manipulators. 
-You simply `#include` the header `decimalformatter.h` to enable format to use the custom formatter. This header is located in the `ch04` directory as stated in `commit 834c3fa`. To compile a program 
-where this custom header is used, just type the same command stated previously section, i.e.:  
+This custom formatter uses the `fixed` and `setprecision` stream manipulators. You simply `#include` the header `decimalformatter.h` to enable format to use the custom formatter. This header is located in the `ch04` directory as stated in `commit 
+186f0b7`. To compile a program  where this custom header is used, just type the same command stated previously section, i.e.:  
 ```bash
 g++ -std=c++20 -I ../code_examples/CPlusPlusHowToProgram11e/libraries/multiprecision-Boost_1_80_0/include exercise_4_10_v1_0_0.cpp -o exercise_4_10_v1_0_0
 ```
