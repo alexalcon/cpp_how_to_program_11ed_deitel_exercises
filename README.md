@@ -244,7 +244,7 @@ For direct contributions to the Notion workspace, contact me via:
 >* **What You’ll Find in Notion**: Deep dives into algorithms, theoretical foundations, design trade-offs, best practices, pitfalls, and robotics/ROS applications.
 >* **The Notion page website** can be accessed here: 🔗 **[C++ Deitel Exercises - Technical Insights & Notes](https://fate-axolotl-685.notion.site/29a755efc7a58047ad5fd6374774a9e6?v=2b0755efc7a580409ccf000c4ed671f9&source=copy_link)**
 
-### Personal Chapter Study Notes
+### 🗒️ Personal Chapter Study Notes
 In addition to exercise-specific insights, the same Notion workspace also contains my personal theoretical notes and key takeaways from each book chapter. These notes include:
 
 - Condensed summaries of chapter concepts.
