@@ -17,31 +17,31 @@
  * Created on: 17-02-2025
  */
 
- #include <iostream>
- #include <format>
- 
- int main() {
-     std::cout << "Pythagorean Triples (a, b, c) where a^2 + b^2 = c^2\n\n";
-     std::cout << "-----------------\n";
-     std::cout << std::format("{:>3}{:>6}{:>6}\n", "a", "b", "c");
-     std::cout << "-----------------\n";
-     
-     // triple-nested loops to find all valid combined triples 
-     // iterate through all combinations of a, b, and c from 1 to 500.
-     /**
-      * in the second for statement, start from 'a' to 
-      * avoid duplicates like (3,4,5) and (4,3,5)
-      */
-     for (int a = 1; a <= 500; ++a) {
-         for (int b = a; b <= 500; ++b) {
-            for (int c = b; c <= 500; ++c) {
+#include <iostream>
+#include <format>
+
+int main() {
+    std::cout << "Pythagorean Triples (a, b, c) where a^2 + b^2 = c^2\n\n";
+    std::cout << "-----------------\n";
+    std::cout << std::format("{:>3}{:>6}{:>6}\n", "a", "b", "c");
+    std::cout << "-----------------\n";
+    
+    // triple-nested loops to find all valid combined triples 
+    // iterate through all combinations of a, b, and c from 1 to 500.
+    /**
+     * in the second for statement, start from 'a' to 
+     * avoid duplicates like (3,4,5) and (4,3,5)
+     */
+    for (int a = 1; a <= 500; ++a) {
+        for (int b = a; b <= 500; ++b) {
+           for (int c = b; c <= 500; ++c) {
                 // check Pythagorean Condition
                 if ((a * a) + (b * b) == (c * c)) {
                     std::cout << std::format("{:>3}{:>6}{:>6}\n", a, b, c);
                 }
-             }
-         }
-     }
- 
-     return 0;
- }
+            }
+        }
+    }
+
+    return 0;
+}
